@@ -1,0 +1,111 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v1.1",
+    "signature": "d0e1c168d3a3efc602a1ba23b608fa40949771d7"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v1.1": {
+      "MemorySaver.AuthenticationService/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "6.1.1",
+          "Ensure.That": "6.0.1"
+        },
+        "runtime": {
+          "MemorySaver.AuthenticationService.dll": {}
+        }
+      },
+      "AutoMapper/6.1.1": {
+        "dependencies": {
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
+      "Ensure.That/6.0.1": {
+        "runtime": {
+          "lib/netstandard1.1/Ensure.That.dll": {}
+        }
+      },
+      "System.Collections.NonGeneric/4.3.0": {
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
+        }
+      },
+      "System.Collections.Specialized/4.3.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Collections.Specialized.dll": {}
+        }
+      },
+      "System.ComponentModel.Primitives/4.3.0": {
+        "runtime": {
+          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "dependencies": {
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.Primitives": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MemorySaver.AuthenticationService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AutoMapper/6.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A+6PAblvzmkXPS20nFBQJvlNSW5oEdyfN5+cxT/Du35fTNyuP5pNDXT64KT/jBgxt7CPduOM0Y7oLnNe0E5IXg==",
+      "path": "automapper/6.1.1",
+      "hashPath": "automapper.6.1.1.nupkg.sha512"
+    },
+    "Ensure.That/6.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yVa9jC7m2ULEKh8tPaJO+3ozmWZAwI8Lh6QyHkIbWE3wVXckotd6JX/h0LXJ8npoDYjt1QiWTW4NO18ce1gY6A==",
+      "path": "ensure.that/6.0.1",
+      "hashPath": "ensure.that.6.0.1.nupkg.sha512"
+    },
+    "System.Collections.NonGeneric/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JBqCePeu7EqxfxP9lBOPHTX1vVdjDNRH7EnqHOyibzXsUWisblhi9/oe2HBmxByoZMXTQZiVnLsofqFVBUnOKw==",
+      "path": "system.collections.nongeneric/4.3.0",
+      "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
+    },
+    "System.Collections.Specialized/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uhkt0m9jF1EqDNmooEQRC3gdzXAjMZYfGwN2BqODTKjiojH00/uswZP/72uohTEd1iHkah6HxVHu9f3UmpER4w==",
+      "path": "system.collections.specialized/4.3.0",
+      "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/GXXxJ/z/7lBOWwZ2v6M6L3dfkluYFCxTMMYc7PqMdsye8xiwdSJTZOm1IY2UBzn4rHFTzu74GZXiS0EpNw2Iw==",
+      "path": "system.componentmodel.primitives/4.3.0",
+      "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.TypeConverter/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vYkmVYq0Q8Rhw4VpysZlOKKCI6sdikAObTioEFyOXjgBTF5Pa3QH4vKotFVQBtC1rjOb5QvSBas9QJGFQnjxnQ==",
+      "path": "system.componentmodel.typeconverter/4.3.0",
+      "hashPath": "system.componentmodel.typeconverter.4.3.0.nupkg.sha512"
+    }
+  }
+}

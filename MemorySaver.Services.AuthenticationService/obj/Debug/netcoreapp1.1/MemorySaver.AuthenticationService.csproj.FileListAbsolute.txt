@@ -1,0 +1,9 @@
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\bin\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.deps.json
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\bin\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.dll
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\bin\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.pdb
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\obj\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.csprojResolveAssemblyReference.cache
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\obj\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.csproj.CoreCompileInputs.cache
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\obj\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.AssemblyInfoInputs.cache
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\obj\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.AssemblyInfo.cs
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\obj\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.dll
+D:\Licenta\MemorySaver\MemorySaver.Services.AuthenticationService\obj\Debug\netcoreapp1.1\MemorySaver.AuthenticationService.pdb

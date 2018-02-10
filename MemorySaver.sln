@@ -1,0 +1,125 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2006
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Domain", "01.Domain", "{0DE304C2-8E11-40F5-9FB2-41A4CF5356BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.Data", "02.Data", "{14657839-AA97-4F99-B49F-0A2E9CCA92A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.Infrastructure", "03.Infrastructure", "{630EB18A-CA74-493D-AE1B-7D4B18C111EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Presentation", "04.Presentation", "{05F47D7C-31E9-427E-A833-CBB62890E184}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99.Tests", "99.Tests", "{7EFB0871-B309-46C6-9C69-C45600F179D8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemorySaver.Domain.Entities", "MemorySaver.Domain.Entities\MemorySaver.Domain.Entities.csproj", "{439DBFE7-B5A8-4C17-AD6E-3515BBCB19C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemorySaver.Domain.ServiceContracts", "MemorySaver.Domain.Contracts\MemorySaver.Domain.ServiceContracts.csproj", "{0E5DEF65-7448-43D7-B3D1-DEE6179FD50A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemorySaver.Data", "MemorySaver.Data\MemorySaver.Data.csproj", "{7AF8D0EB-7505-412E-A357-0529326073AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemorySaver.Api", "MemorySaver.Api\MemorySaver.Api.csproj", "{5EE0D799-E0AE-4CB4-B0A8-E4EFDA1CA8AF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemorySaver.Services", "MemorySaver.Services\MemorySaver.Services.csproj", "{9544EB4D-4B76-4E53-BBBD-9D8271EEBC79}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemorySaver.Domain.Interfaces", "MemorySaver.Domain.Interfaces\MemorySaver.Domain.Interfaces.csproj", "{6B4D6163-B194-4AA4-AFC9-38EC70EE890B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MemorySaver.Configuration", "MemorySaver.Configuration\MemorySaver.Configuration.csproj", "{ADA8C536-5304-496C-B042-3A5D533CE18F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemorySaver.Authentication", "MemorySaver.Authentication\MemorySaver.Authentication.csproj", "{F0EF1E3C-B1F0-43E1-BA4E-236C1FA828D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{439DBFE7-B5A8-4C17-AD6E-3515BBCB19C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{439DBFE7-B5A8-4C17-AD6E-3515BBCB19C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{439DBFE7-B5A8-4C17-AD6E-3515BBCB19C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{439DBFE7-B5A8-4C17-AD6E-3515BBCB19C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5DEF65-7448-43D7-B3D1-DEE6179FD50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5DEF65-7448-43D7-B3D1-DEE6179FD50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5DEF65-7448-43D7-B3D1-DEE6179FD50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5DEF65-7448-43D7-B3D1-DEE6179FD50A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF8D0EB-7505-412E-A357-0529326073AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF8D0EB-7505-412E-A357-0529326073AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF8D0EB-7505-412E-A357-0529326073AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF8D0EB-7505-412E-A357-0529326073AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EE0D799-E0AE-4CB4-B0A8-E4EFDA1CA8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EE0D799-E0AE-4CB4-B0A8-E4EFDA1CA8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EE0D799-E0AE-4CB4-B0A8-E4EFDA1CA8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EE0D799-E0AE-4CB4-B0A8-E4EFDA1CA8AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9544EB4D-4B76-4E53-BBBD-9D8271EEBC79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9544EB4D-4B76-4E53-BBBD-9D8271EEBC79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9544EB4D-4B76-4E53-BBBD-9D8271EEBC79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9544EB4D-4B76-4E53-BBBD-9D8271EEBC79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4D6163-B194-4AA4-AFC9-38EC70EE890B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4D6163-B194-4AA4-AFC9-38EC70EE890B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4D6163-B194-4AA4-AFC9-38EC70EE890B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4D6163-B194-4AA4-AFC9-38EC70EE890B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADA8C536-5304-496C-B042-3A5D533CE18F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADA8C536-5304-496C-B042-3A5D533CE18F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADA8C536-5304-496C-B042-3A5D533CE18F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADA8C536-5304-496C-B042-3A5D533CE18F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EF1E3C-B1F0-43E1-BA4E-236C1FA828D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EF1E3C-B1F0-43E1-BA4E-236C1FA828D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EF1E3C-B1F0-43E1-BA4E-236C1FA828D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EF1E3C-B1F0-43E1-BA4E-236C1FA828D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{439DBFE7-B5A8-4C17-AD6E-3515BBCB19C3} = {0DE304C2-8E11-40F5-9FB2-41A4CF5356BA}
+		{0E5DEF65-7448-43D7-B3D1-DEE6179FD50A} = {0DE304C2-8E11-40F5-9FB2-41A4CF5356BA}
+		{7AF8D0EB-7505-412E-A357-0529326073AC} = {14657839-AA97-4F99-B49F-0A2E9CCA92A8}
+		{5EE0D799-E0AE-4CB4-B0A8-E4EFDA1CA8AF} = {05F47D7C-31E9-427E-A833-CBB62890E184}
+		{9544EB4D-4B76-4E53-BBBD-9D8271EEBC79} = {630EB18A-CA74-493D-AE1B-7D4B18C111EA}
+		{6B4D6163-B194-4AA4-AFC9-38EC70EE890B} = {0DE304C2-8E11-40F5-9FB2-41A4CF5356BA}
+		{ADA8C536-5304-496C-B042-3A5D533CE18F} = {630EB18A-CA74-493D-AE1B-7D4B18C111EA}
+		{F0EF1E3C-B1F0-43E1-BA4E-236C1FA828D5} = {630EB18A-CA74-493D-AE1B-7D4B18C111EA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03E4629D-5A77-43F5-84F1-925F64BCD886}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://memorysaver.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MemorySaver.Api\\MemorySaver.Api.csproj
+		SccProjectTopLevelParentUniqueName1 = MemorySaver.sln
+		SccProjectName1 = MemorySaver.Api
+		SccLocalPath1 = MemorySaver.Api
+		SccProjectUniqueName2 = MemorySaver.Data\\MemorySaver.Data.csproj
+		SccProjectTopLevelParentUniqueName2 = MemorySaver.sln
+		SccProjectName2 = MemorySaver.Data
+		SccLocalPath2 = MemorySaver.Data
+		SccProjectUniqueName3 = MemorySaver.Domain.Contracts\\MemorySaver.Domain.ServiceContracts.csproj
+		SccProjectTopLevelParentUniqueName3 = MemorySaver.sln
+		SccProjectName3 = MemorySaver.Domain.Contracts
+		SccLocalPath3 = MemorySaver.Domain.Contracts
+		SccProjectUniqueName4 = MemorySaver.Domain.Entities\\MemorySaver.Domain.Entities.csproj
+		SccProjectTopLevelParentUniqueName4 = MemorySaver.sln
+		SccProjectName4 = MemorySaver.Domain.Entities
+		SccLocalPath4 = MemorySaver.Domain.Entities
+		SccProjectUniqueName5 = MemorySaver.Domain.Interfaces\\MemorySaver.Domain.Interfaces.csproj
+		SccProjectTopLevelParentUniqueName5 = MemorySaver.sln
+		SccProjectName5 = MemorySaver.Domain.Interfaces
+		SccLocalPath5 = MemorySaver.Domain.Interfaces
+		SccProjectUniqueName6 = MemorySaver.Services\\MemorySaver.Services.csproj
+		SccProjectTopLevelParentUniqueName6 = MemorySaver.sln
+		SccProjectName6 = MemorySaver.Services
+		SccLocalPath6 = MemorySaver.Services
+		SccProjectUniqueName7 = MemorySaver.Configuration\\MemorySaver.Configuration.csproj
+		SccProjectTopLevelParentUniqueName7 = MemorySaver.sln
+		SccProjectName7 = MemorySaver.Configuration
+		SccLocalPath7 = MemorySaver.Configuration
+		SccProjectUniqueName8 = MemorySaver.Authentication\\MemorySaver.Authentication.csproj
+		SccProjectTopLevelParentUniqueName8 = MemorySaver.sln
+		SccProjectName8 = MemorySaver.Authentication
+		SccLocalPath8 = MemorySaver.Authentication
+	EndGlobalSection
+EndGlobal
