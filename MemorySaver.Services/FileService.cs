@@ -50,6 +50,37 @@ namespace MemorySaver.Services
             return false;
         }
 
+        public bool UploadFileFromFacebook(byte[] file, string facebookId, string description, Guid chestId)
+        {
+            Domain.Entities.File newFile = new Domain.Entities.File
+            {
+                ChestId = chestId,
+                Type = "jpg",
+                FacebookId = facebookId,
+                FileName = facebookId + ".jpg",
+                Description = description
+            };
+
+            fileRepository.Add(newFile);
+
+            if (fileRepository.SaveChages())
+            {
+                string path = "C:\\LicentaFilesFolders\\" + chestId;
+                if (!Directory.Exists(path))
+                {
+                    Directory.CreateDirectory(path);
+                }
+                string fileExtension = "jpg";
+                FileStream fileStream = File.Create(path + "\\" + newFile.Id + "." + fileExtension);
+
+                fileStream.Write(file, 0, file.Length);
+                fileStream.Close();
+
+                return true;
+            }
+            return false;
+        }
+
         public GetFileResponseDTO GetFile(Guid fileId)
         {
             Domain.Entities.File fileEntity = fileRepository.GetById(fileId);
@@ -68,7 +99,8 @@ namespace MemorySaver.Services
                 FileType = fileEntity.Type,
                 FacebookId = fileEntity.FacebookId,
                 VimeoId = fileEntity.VimeoId,
-                Description = fileEntity.Description
+                Description = fileEntity.Description,
+                FileName = fileEntity.FileName
             };
 
             return fileDto;
@@ -79,6 +111,21 @@ namespace MemorySaver.Services
             fileRepository.Delete(fileId);
 
             return fileRepository.SaveChages();
+        }
+
+        public byte[] GetFileForDownload(Guid id)
+        {
+            Domain.Entities.File fileEntity = fileRepository.GetById(id);
+            string pathToFile = $"C:\\LicentaFilesFolders\\{fileEntity.ChestId}\\{fileEntity.Id}.{fileEntity.Type}";
+
+            FileStream fileStream = new FileStream(pathToFile, FileMode.Open);
+
+            byte[] fileBase64 = new byte[fileStream.Length];
+
+            fileStream.Read(fileBase64, 0, (int)fileStream.Length);
+            fileStream.Close();
+
+            return fileBase64;
         }
     }
 }

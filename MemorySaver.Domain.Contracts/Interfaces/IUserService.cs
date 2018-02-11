@@ -8,7 +8,7 @@ namespace MemorySaver.Domain.ServiceContracts.Interfaces
 {
     public interface IUserService
     {
-        bool CreateUser(CreateUserRequestDTO newUser);
+        GenericResponseDTO CreateUser(CreateUserRequestDTO newUser);
 
         LoginUserResponseDTO Login(LoginUserRequestDTO loginUser);
 

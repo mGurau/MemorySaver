@@ -4,6 +4,8 @@ using MemorySaver.Domain.ServiceContracts.Interfaces;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.IO;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace MemorySaver.Api.Controllers
 {
@@ -58,8 +60,30 @@ namespace MemorySaver.Api.Controllers
             return BadRequest();
         }
 
+        [HttpPost("{id:guid}/add-facebook-file")]
+        public async Task<IActionResult> AddFacebookFile(Guid id, string url, string facebookId, string description)
+        {
+            using (var client = new HttpClient())
+            {
+
+                using (var result = await client.GetAsync(url))
+                {
+                    if (result.IsSuccessStatusCode)
+                    {
+                        var fileInByte = await result.Content.ReadAsByteArrayAsync();
+                        if (fileService.UploadFileFromFacebook(fileInByte, facebookId, description, id))
+                        {
+                            return Ok();
+                        }
+                    }
+
+                }
+            }
+            return null;
+        }
+
         [HttpPut("{id:guid}")]
-        public IActionResult EditChest(Guid id, EditChestRequestDTO chestDetails)
+        public IActionResult EditChest(Guid id, [FromBody]EditChestRequestDTO chestDetails)
         {
             chestDetails.Id = id;
             if (chestService.EditChest(chestDetails))
@@ -70,7 +94,7 @@ namespace MemorySaver.Api.Controllers
             return BadRequest();
         }
 
-        [HttpDelete("id:guid")]
+        [HttpDelete("{id:guid}")]
         public IActionResult DeleteChest(Guid id)
         {
             if (chestService.DeleteChest(id))

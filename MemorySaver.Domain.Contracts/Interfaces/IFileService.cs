@@ -13,8 +13,12 @@ namespace MemorySaver.Domain.ServiceContracts.Interfaces
             string vimeoId,
             Guid chestId);
 
+        bool UploadFileFromFacebook(byte[] file, string facebookId, string description, Guid chestId);
+
         GetFileResponseDTO GetFile(Guid fileId);
 
         bool DeleteFile(Guid fileId);
+
+        byte[] GetFileForDownload(Guid id);
     }
 }

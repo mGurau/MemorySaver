@@ -1,4 +1,5 @@
 ﻿using MemorySaver.Domain.ServiceContracts.DTOs.Request;
+using MemorySaver.Domain.ServiceContracts.DTOs.Response;
 using MemorySaver.Domain.ServiceContracts.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,11 +21,12 @@ namespace MemorySaver.Api.Controllers
         [HttpPost("register")]
         public IActionResult CreateUser([FromBody] CreateUserRequestDTO newUser)
         {
-            if (userService.CreateUser(newUser))
+            GenericResponseDTO response = userService.CreateUser(newUser);
+            if (response.Success)
             {
                 return Ok();
             }
-            return BadRequest();
+            return BadRequest(response.Message);
         }
     }
 }

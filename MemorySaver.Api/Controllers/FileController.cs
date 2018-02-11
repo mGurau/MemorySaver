@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using MemorySaver.Domain.ServiceContracts.DTOs.Response;
 using MemorySaver.Domain.ServiceContracts.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -38,7 +39,21 @@ namespace MemorySaver.Api.Controllers
         [HttpDelete("{id:guid}")]
         public IActionResult Delete(Guid id)
         {
+            if (fileService.DeleteFile(id))
+            {
+                return Accepted();
+            }
+
             return BadRequest();
+        }
+
+        [HttpGet("{id:guid}/download")]
+        public IActionResult DownloadFeedbackForTeamMember(Guid id)
+        {
+            var result = fileService.GetFileForDownload(id);
+            var stream = new MemoryStream(result);
+
+            return File(stream, "application/octet-stream");
         }
     }
 }

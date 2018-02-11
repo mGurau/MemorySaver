@@ -24,18 +24,34 @@ namespace MemorySaver.Services
             this.userRepository = userRepository;
         }
 
-        public bool CreateUser(CreateUserRequestDTO newUser)
+        public GenericResponseDTO CreateUser(CreateUserRequestDTO newUser)
         {
-            User userToBeCreated = new User
+            GenericResponseDTO response = new GenericResponseDTO();
+            if (userRepository.GetByEmail(newUser.Email) == null)
             {
-                Email = newUser.Email,
-                FirstName = newUser.FirstName,
-                LastName = newUser.LastName,
-                Password = newUser.Password
-            };
+                User userToBeCreated = new User
+                {
+                    Email = newUser.Email,
+                    FirstName = newUser.FirstName,
+                    LastName = newUser.LastName,
+                    Password = newUser.Password
+                };
 
-            userRepository.Add(userToBeCreated);
-            return userRepository.SaveChages();
+                userRepository.Add(userToBeCreated);
+                response.Success = userRepository.SaveChages();
+
+                if (!response.Success)
+                {
+                    response.Message = "There has been a problem with creating the user.";
+                }
+            }
+            else
+            {
+                response.Success = false;
+                response.Message = "The email is already in use";
+            }
+
+            return response;
         }
 
         public IEnumerable<Chest> GetUserChests(Guid userId)
